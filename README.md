@@ -1,4 +1,4 @@
-# ExampleIntegration Rest API
+# Rest API with Simple JWT in Django
 
 This application is developed to fulfill the requirements for a Simple
 Rest Application that is able to; 
