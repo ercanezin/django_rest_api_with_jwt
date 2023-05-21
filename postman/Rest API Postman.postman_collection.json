@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "9b826c62-9c52-452e-894d-8868b4290d41",
+		"name": "Rest API Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27289863"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "REGISTER NEW USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "deneme",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456qwe@@",
+									"type": "text"
+								},
+								{
+									"key": "re_password",
+									"value": "123456qwe@@",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "deneme@deneme.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "deneme",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "denesene",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/v1/auth/register/"
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "deneme",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456qwe@@",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/v1/auth/login/"
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NDcwOTIzNiwiaWF0IjoxNjg0NjIyODM2LCJqdGkiOiJlODEwMGM0N2FlZDc0ZmRiYjg2NzVlOWEyYjJhZTExYyIsInVzZXJfaWQiOjF9.H3X2I3_596dPeZi8oL9cE8JuwB4YQUDiKSoKCA3pNIw",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/v1/auth/token/refresh/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INTEGRATION",
+			"item": [
+				{
+					"name": "LOGS",
+					"item": [
+						{
+							"name": "GET USER LOGS",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NjczMDY4LCJpYXQiOjE2ODQ2NzI3NjgsImp0aSI6IjQ5MzA4ZGZlNzhmOTQ2MDI5MzBkZjM0ODJmYmNjM2QzIiwidXNlcl9pZCI6MX0.5aajyFRfGqGM8YTpU28bh5rQZ5ZRdnSoZ1pZl4onJuI"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/v1/users/1/login-logs"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
