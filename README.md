@@ -146,7 +146,10 @@ Once your server is up and running successfully, you are ready to test out Rest 
 ```
 * returns  login logs of user on JSON format. 
 
+### POSTMAN
 
+If you would like to quickly import the API reference outlined above, 
+please use postman export collection json file under `postman` directory to easily export the project into postman.
 
 
 
