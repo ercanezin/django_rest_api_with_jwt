@@ -8,7 +8,7 @@ from .serializers import LogsSerializer
 
 
 class LogsApiView(generics.GenericAPIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, user_id):
         queryset = Logs.objects.all()
